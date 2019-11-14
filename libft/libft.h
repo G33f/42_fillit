@@ -79,6 +79,7 @@ double				ft_sqrt(double num);
 double				ft_pow(double num, int pow);
 char				*ft_strndup(const char *s1, size_t n);
 void				ft_matdel(char ***as, int i);
+void				ft_matcp(char ***mat1, char ***mat2, int mt1_l, int mt2_l);
 int					get_next_line(const int fd, char **line);
 
 typedef struct		s_list

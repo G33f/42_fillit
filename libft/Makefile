@@ -78,6 +78,7 @@ SRCS =	ft_bzero.c\
 		ft_pow.c\
 		ft_strndup.c\
 		ft_matdel.c\
+		ft_matcp.c\
 		get_next_line.c\
 
 OBJ =	ft_bzero.o\
@@ -147,6 +148,7 @@ OBJ =	ft_bzero.o\
 		ft_strndup.o\
 		get_next_line.o\
 		ft_matdel.o\
+		ft_matcp.o\
 
 FLAGS =	-Wall -Wextra -Werror -I ./libft.h
 

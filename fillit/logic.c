@@ -12,20 +12,77 @@
 
 #include "fillit.h"
 
-/*char	**construct(tetrimino tes, char ***cube)
+void		put(tetrimino tes, char ***cube, i, j)
 {
-	while()
-}*/
+	int m;
+	int n;
 
-int	lengt(tetrimino *tes)
+	m = 0;
+	n = 0;
+	while (m < tes->y)
+	{
+		while (n < tes->x)
+		{
+			coub[j + m][i + n] = tes->content[m][n];
+		}
+		n = 0;
+		m++;
+	}
+}
+
+int			**construct(tetrimino tes, char ***cube)
 {
-	int i;
+	char	**step;
+	int		i;
+	int		j;
+	int		leng;
 
-	if (((int)ft_sqrt(tes->numb) * (int)ft_sqrt(tes->numb)) < i)
-		i = ((int)ft_sqrt(tes->numb) + 1);
-	else
-		i = ((int)ft_sqrt(tes->numb));
-	return (i);
+	i = 0;
+	j = 0;
+	if(!tes)
+		return (1);
+	leng = ft_strlen(cube[0]);
+	if (!(generate(&step, leng)))
+		return (-1);
+	ft_matcp(step, cube, leng, leng);
+	while (j < (leng - tes->y))
+	{
+		while (i < (leng - tes->x))
+		{
+			if (!(checker(step, tes,i , j)))
+				i++;
+			else
+			{
+				put(tes, step, i, j);
+				i = construct(tes->next, step);
+				if (i == -1 || !i)
+					ft_matdel(step, leng);
+				return (i);
+			}
+		}
+	}
+}
+
+int		checker(tetrimino tes, char **cube, int i, int j)
+{
+	int	m;
+	int	n;
+
+	m = 0;
+	n = 0;
+	while (m < tes->y)
+	{
+		while (n < tes->x)
+		{
+			if ((cube[j + m][i + n] == '.') || (tes->content[m][n] == '.'))
+				n++;
+			else
+				return (0);
+		}
+		n = 0;
+		m++;
+	}
+	return (1);
 }
 
 int			generate(char ***cube, int i)
@@ -55,18 +112,4 @@ int			generate(char ***cube, int i)
 		r++;
 	}
 	return (1);
-}
-
-int	main()
-{
-	char		**cube;
-	tetrimino	*tes;
-
-	/*tes = test();*/
-	if (!(generate(&cube, lengt(tes))))
-	{
-		ft_putstr("error\n");
-		return 0;
-	}
-	return 0;
 }

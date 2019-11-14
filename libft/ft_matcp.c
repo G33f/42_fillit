@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fillit.h                                           :+:      :+:    :+:   */
+/*   ft_matcp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wpoudre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/12 16:30:33 by wpoudre           #+#    #+#             */
-/*   Updated: 2019/11/12 16:30:36 by wpoudre          ###   ########.fr       */
+/*   Created: 2019/11/14 20:56:52 by wpoudre           #+#    #+#             */
+/*   Updated: 2019/11/14 20:56:54 by wpoudre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILLIT_H
-# define FILLIT_H
-#include "../libft/libft.h"
-#include "torch.c"
-#icnlude "logic.c"
+#include "libft.h"
 
-typedef struct			s_tetrimino
+void	ft_matcp(char ***mat1, char ***mat2, int mt1_l, int mt2_l)
 {
-	size_t				numb;
-	char				**content;
-	struct tetrimino	*next;
-	size_t				x;
-	size_t				y;
-}						tetrimino;
+	int i;
+	int j;
 
-#endif
+	if (!mat1 || !mat2 || (mt1_l != mt2_l) || (!mt1_l))
+		return ;
+	i = 0;
+	j = 0;
+	while (j < mt1_l)
+	{
+		while(i < mt1_l)
+		{
+			mat1[j][i] = mat2[j][i];
+			i++;
+		}
+		i = 0;
+		j++;
+	}
+}
