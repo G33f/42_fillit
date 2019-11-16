@@ -16,10 +16,11 @@ int		lengt(tetrimino *tes)
 {
 	int i;
 
-	if (((int)ft_sqrt(tes->numb) * (int)ft_sqrt(tes->numb)) < i)
-		i = ((int)ft_sqrt(tes->numb) + 1);
+	i = tes->numb * 4;
+	if (((int)ft_sqrt(i) * (int)ft_sqrt(i)) < i)
+		i = ((int)ft_sqrt(i) + 1);
 	else
-		i = ((int)ft_sqrt(tes->numb));
+		i = ((int)ft_sqrt(i));
 	return (i);
 }
 
@@ -51,5 +52,5 @@ int	main()
 	}
 	ft_putmat(cube);
 	ft_matdel(cube);
-	return 0;
+	return (0);
 }

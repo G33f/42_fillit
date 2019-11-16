@@ -36,8 +36,8 @@ int			**construct(tetrimino tes, char ***cube)
 	int		i;
 	int		j;
 	int		leng;
+	int		m;
 
-	i = 0;
 	j = 0;
 	if(!tes)
 		return (1);
@@ -47,20 +47,23 @@ int			**construct(tetrimino tes, char ***cube)
 	ft_matcp(step, cube, leng, leng);
 	while (j < (leng - tes->y))
 	{
+		i = 0;
 		while (i < (leng - tes->x))
 		{
-			if (!(checker(step, tes,i , j)))
-				i++;
-			else
+			if (checker(step, tes,i , j) == 1)
 			{
 				put(tes, step, i, j);
-				i = construct(tes->next, step);
-				if (i == -1 || !i)
+				m = construct(tes->next, step);
+				if (m == -1)
 					ft_matdel(step, leng);
-				return (i);
+				if (m == 1 || m == -1)
+					return (m);
 			}
+			i++;
 		}
+		j++;
 	}
+	return (0);
 }
 
 int		checker(tetrimino tes, char **cube, int i, int j)
