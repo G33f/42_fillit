@@ -51,6 +51,7 @@ int					ft_y(char *s);
 tetrimino			*maintet(char *s);
 tetrimino  			 *ft_newtet(char **s, int	x, int y, int	numb);
 char   				**ft_add(char *s);
+char				*ft_add_2(char *s, char *buf, int sim);
 int					ft_search(char *s);
 
 int					valid(char **s);

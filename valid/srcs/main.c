@@ -6,7 +6,7 @@
 /*   By: tzenz <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/30 14:37:14 by tzenz             #+#    #+#             */
-/*   Updated: 2019/10/30 14:37:16 by tzenz            ###   ########.fr       */
+/*   Updated: 2019/11/19 14:03:51 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,52 +32,13 @@ int		main(void)
 		return (-1);
 	}
 	head = maintet(s);
-	while (head->next != NULL)
+/*	while (head->next != NULL)
 	{
-		printf("%s\nx - %zu y - %zu numb - %zu\n", *head->content, head->x, head->y, head->numb);
+		ft_putsstr(head->content);
+		printf("x - %zu y - %zu numb - %zu\n", head->x, head->y, head->numb);
 		head = head->next;
 	}
-	printf("%s\nx - %zu y - %zu numb - %zu\n", *head->content, head->x, head->y, head->numb);
+	ft_putsstr(head->content);
+	printf("x - %zu y - %zu numb - %zu\n", head->x, head->y, head->numb);*/
 	return (0);
 }
-
-/*
-char   *ft_add(char *s)
-{
-	char	**ho;
-	char	*buf;
-	int		sim;
-	int		i;
-	int		j;
-
-	buf = ft_strnew(10);
-	j = 0;
-	i = 0;
-	sim = 0;
-	while (s[i] && i < 20)
-	{
-		while (s[i] && s[i] != '\n')
-		{
-			if (s[i] != '.')
-				sim = s[i];
-			i++;
-		}
-		if (sim)
-		{
-			i -= 4;
-			while (s[i] && s[i] != '\n')
-			{
-				if (s[i] == sim || s[i + 5] == sim || s[i + 10] == sim)
-					buf[j++] = s[i];
-				else if (s[i - 5] == sim || s[i - 10] == sim)
-					buf[j++] = s[i];
-				i++;
-			}
-			buf[j++] = '\n';
-			sim = 0;
-		}
-		i++;
-	}
-	ho = ft_strsplit(buf, '\n');
-	return (ho);
-}*/

@@ -13,7 +13,7 @@
 #include "../libft/include/libft.h"
 #include <stdio.h>
 
-tetrimino	*maintet(char *s)
+tetrimino		*maintet(char *s)
 {
 	tetrimino	*head;
 	tetrimino	*tmp;
@@ -42,29 +42,29 @@ tetrimino	*maintet(char *s)
 	return (head);
 }
 
-char		**ft_add(char *s)
+char			**ft_add(char *s)
 {
-	char	**ho;
-	char	*buf;
-	int		sim;
-	int		i;
-	int		j;
+	char		**ho;
+	char		*buf;
+	int			sim;
 
 	buf = ft_strnew(10);
+	ho = ft_strsplit(ft_add_2(s, buf, sim), '\n');
+	free(buf);
+	return (ho);
+}
+
+char			*ft_add_2(char *s, char *buf, int sim)
+{
+	int			i;
+	int			j;
+
 	j = 0;
 	i = 0;
-	sim = 0;
 	while (s[i] && i < 20)
 	{
-		while (s[i] && s[i] != '\n')
+		if ((sim = ft_search(&s[i])))
 		{
-			if (s[i] != '.')
-				sim = s[i];
-			i++;
-		}
-		if (sim)
-		{
-			i -= 4;
 			while (s[i] && s[i] != '\n')
 			{
 				if (s[i] == sim || s[i + 5] == sim || s[i + 10] == sim)
@@ -75,11 +75,12 @@ char		**ft_add(char *s)
 			}
 			buf[j++] = '\n';
 			sim = 0;
+			i++;
 		}
-		i++;
+		else
+			i += 5;
 	}
-	ho = ft_strsplit(buf, '\n');
-	return (ho);
+	return (buf);
 }
 
 tetrimino		*ft_newtet(char **s, int x, int y, int numb)

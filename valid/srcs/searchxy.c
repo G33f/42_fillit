@@ -18,6 +18,7 @@ int		ft_search(char *s)
 	int sim;
 	int i;
 
+	sim = 0;
 	i = 0;
 	while (i < 4)
 	{
