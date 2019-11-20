@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ando"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/tzenz/ando/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/tzenz/ando/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/tzenz/ando/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ando">
+				<Option output="/Users/tzenz/ando/cmake-build-debug/ando" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/tzenz/ando/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/tzenz/ando/FILL2.0"/>
+					<Add directory="/Users/tzenz/ando/FILL2.0/libft"/>
+					<Add directory="/Users/tzenz/ando/fillit"/>
+					<Add directory="/Users/tzenz/ando/fillit_test_variant_s_bagami"/>
+					<Add directory="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft"/>
+					<Add directory="/Users/tzenz/ando/libft"/>
+					<Add directory="/Users/tzenz/ando/valid/libft/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 ando"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ando/fast">
+				<Option output="/Users/tzenz/ando/cmake-build-debug/ando" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/tzenz/ando/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/tzenz/ando/FILL2.0"/>
+					<Add directory="/Users/tzenz/ando/FILL2.0/libft"/>
+					<Add directory="/Users/tzenz/ando/fillit"/>
+					<Add directory="/Users/tzenz/ando/fillit_test_variant_s_bagami"/>
+					<Add directory="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft"/>
+					<Add directory="/Users/tzenz/ando/libft"/>
+					<Add directory="/Users/tzenz/ando/valid/libft/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 ando/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/tzenz/ando/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/fillit.h">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/ft_starter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_alpdown.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_alpup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_atoi.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_bzero.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_cu_wards.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_isalnum.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_isalpha.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_isascii.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_isdigit.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_isprint.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_itoa.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_lstadd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_lstdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_lstdelone.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_lstiter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_lstmap.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_lstnelem.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_lstnew.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_matcp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_matdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_memalloc.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_memccpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_memchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_memcmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_memcpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_memdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_memmove.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_memset.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_pow.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putchar.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putchar_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putendl.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putendl_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putmat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putnbr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putnbr_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_putstr_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_sqrt.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strcat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strclr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strcmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strcpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strdup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strequ.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_striter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_striteri.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strjoin.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strlcat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strlen.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strmap.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strmapi.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strncat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strncmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strncpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strndup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strnequ.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strnew.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strnstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strrchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strsplit.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strsub.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_strtrim.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_tolower.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/ft_toupper.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/get_next_line.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/libft/libft.h">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/logic2.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/main.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/newtet.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/searchxy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/FILL2.0/valid1.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit/fillit.h">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit/logic.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit/torch.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/fillit.h">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_alpdown.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_alpup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_atoi.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_bzero.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_cu_wards.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_isalnum.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_isalpha.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_isascii.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_isdigit.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_isprint.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_itoa.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_lstadd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_lstdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_lstdelone.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_lstiter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_lstmap.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_lstnelem.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_lstnew.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_matcp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_matdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_memalloc.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_memccpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_memchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_memcmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_memcpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_memdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_memmove.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_memset.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_pow.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putchar.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putchar_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putendl.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putendl_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putmat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putnbr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putnbr_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_putstr_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_sqrt.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strcat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strclr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strcmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strcpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strdup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strequ.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_striter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_striteri.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strjoin.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strlcat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strlen.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strmap.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strmapi.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strncat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strncmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strncpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strndup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strnequ.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strnew.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strnstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strrchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strsplit.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strsub.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_strtrim.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_tolower.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/ft_toupper.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/get_next_line.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/libft/libft.h">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/logic.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/main.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/newtet.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/searchxy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/torch.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/fillit_test_variant_s_bagami/valid1.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_alpdown.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_alpup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_atoi.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_bzero.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_cu_wards.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_isalnum.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_isalpha.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_isascii.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_isdigit.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_isprint.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_itoa.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_lstadd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_lstdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_lstdelone.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_lstiter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_lstmap.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_lstnelem.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_lstnew.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_matcp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_matdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_memalloc.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_memccpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_memchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_memcmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_memcpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_memdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_memmove.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_memset.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_pow.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putchar.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putchar_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putendl.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putendl_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putmat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putnbr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putnbr_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_putstr_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_sqrt.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strcat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strclr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strcmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strcpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strdup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strequ.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_striter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_striteri.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strjoin.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strlcat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strlen.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strmap.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strmapi.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strncat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strncmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strncpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strndup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strnequ.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strnew.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strnstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strrchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strsplit.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strsub.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_strtrim.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_tolower.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/ft_toupper.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/get_next_line.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/libft/libft.h">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_atoi.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_bzero.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_isalnum.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_isalpha.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_isascii.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_isdigit.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_isprint.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_itoa.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_lstadd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_lstdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_lstdelone.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_lstiter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_lstmap.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_lstnew.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_memalloc.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_memccpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_memchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_memcmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_memcpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_memdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_memmove.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_memset.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putchar.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putchar_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putendl.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putendl_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putnbr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putnbr_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putsstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_putstr_fd.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strcat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strclr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strcmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strcpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strdel.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strdup.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strequ.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_striter.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_striteri.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strjoin.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strlcat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strlen.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strmap.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strmapi.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strncat.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strncmp.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strncpy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strnequ.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strnew.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strnstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strrchr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strsplit.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strstr.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strsub.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strtrim.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_strtrims.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_tolower.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/ft_toupper.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/get_next_line.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/libft/include/libft.h">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/srcs/main.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/srcs/newtet.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/srcs/searchxy.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/valid/srcs/valid1.c">
+			<Option target="ando"/>
+		</Unit>
+		<Unit filename="/Users/tzenz/ando/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

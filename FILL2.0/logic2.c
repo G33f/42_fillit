@@ -33,7 +33,7 @@ char	**ft_put(tetrimino *tes, char **cube, int i, int j)
 
 char		**ft_build(tetrimino *tes, char **cube, int leng)
 {
-	char	**step;
+	char	**step = NULL;
 	int		i;
 	int		j;
 
