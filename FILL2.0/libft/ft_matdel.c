@@ -13,16 +13,17 @@
 
 #include "libft.h"
 
-void	ft_matdel(char **as, int i)
+void	ft_matdel(void **as, int i)
 {
-	if (!as || !*as || !**as)
+	if (!as || !*as)
 		return ;
 	while(i)
 	{
-		ft_strdel(as[i]);
+		ft_memdel(&as[i]);
+		as[i] = NULL;
 		i--;
 	}
-	free(**as);
-	**as = 0;
+	ft_memdel(as);
+	as = NULL;
 }
 

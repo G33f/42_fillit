@@ -12,24 +12,31 @@
 
 #include "libft.h"
 
-void	**ft_matcp(char **mat1, char **mat2, int mt1_l, int mt2_l)
+void	**ft_matcp(void **dest, const void **source, size_t n1, size_t n2)
 {
-	int i;
-	int j;
+	unsigned char	**str1;
+	unsigned char	**str2;
+	size_t			i;
+	size_t          j;
 
-	if (!mat1 || !mat2 || (mt1_l != mt2_l) || (!mt1_l))
-		return ;
+	str1 = (unsigned char **)dest;
+	str2 = (unsigned char **)source;
+	if (!source && !dest)
+		return (NULL);
 	i = 0;
 	j = 0;
-	while (j < mt1_l)
+
+	if (n1 <= 0 || n2 <= 0)
+		return (dest);
+	while (i < n1)
 	{
-		while(i < mt2_l)
+		while(j < n2)
 		{
-			mat1[j][i] = mat2[j][i];
-			i++;
+			str1[i][j] = str2[i][j];
+			j++;
 		}
-		i = 0;
-		j++;
+		j=0;
+		i++;
 	}
-	char (mat1);
+	return (dest);
 }

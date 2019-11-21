@@ -34,5 +34,6 @@ int						ft_logic(tetrimino *tes);
 int						lengt(tetrimino *tes);
 int						ft_starter(int fd);
 char					put(tetrimino **tes, char **cube, int i,int j);
+char					**ft_build(tetrimino *tes, char **cube, int leng);
 
 #endif

@@ -51,7 +51,6 @@ int					ft_tolower(int ch);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
-void				ft_strdel(char **as);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -78,9 +77,9 @@ char				*ft_alpup(char *str);
 double				ft_sqrt(double num);
 double				ft_pow(double num, int pow);
 char				*ft_strndup(const char *s1, size_t n);
-void				ft_matdel(char **as, int i);
-char				**ft_matcp(char **mat1, char **mat2, int mt1_l, int mt2_l);
-void				ft_putmat(char **mat);
+void				ft_matdel(void **as, int i);
+void				**ft_matcp(void **dest, const void **source, size_t n1, size_t n2);
+void				ft_putmat(const char **mat);
 int					get_next_line(const int fd, char **line);
 
 typedef struct		s_list

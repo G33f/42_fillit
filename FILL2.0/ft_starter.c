@@ -19,9 +19,9 @@ int		ft_check(tetrimino *tes, char **cube, int i, int j)
 
 	m = 0;
 	n = 0;
-	while (m < tes->y)
+	while (m < (int)tes->y)
 	{
-		while (n < tes->x)
+		while (n < (int)tes->x)
 		{
 			if ((cube[j + m][i + n] == '.') || (tes->content[m][n] == '.'))
 				n++;
@@ -47,7 +47,7 @@ char	**ft_newmat(char **cube, int i)
 	{
 		if(!(cube[r] = malloc(sizeof(i + 1))))
 		{
-			ft_matdel(cube, i);
+			ft_matdel((void**)cube, i);
 			return (NULL);
 		}
 		r++;
@@ -55,7 +55,7 @@ char	**ft_newmat(char **cube, int i)
 	r = 0;
 	while(r < i)
 	{
-		*cube[r] = ft_memset(cube[r], '.', i);
+		*cube[r] = (char)ft_memset(cube[r], '.', i);
 		cube[r][i + 1] = '\n';
 		r++;
 	}
@@ -74,17 +74,17 @@ int			ft_logic(tetrimino *tes)
 		cube = ft_newmat(cube, i);
 		if (cube == NULL)
 			return (0);
-		cube = ft_build(cube, tes, i);
+		cube = ft_build(tes, cube, i);
 		if (cube == NULL)
 		{
-			ft_matdel(cube, i);
+			ft_matdel((void**)cube, i);
 			i++;
 		}
 		else
 		{
-			ft_putmat(cube);
-			ft_matdel(cube, i);
-			return (1)
+			ft_putmat((const char**)cube);
+			ft_matdel((void**)cube, i);
+			return (1);
 		}
 	}
 	return (0);
@@ -108,9 +108,7 @@ int		ft_starter(int fd)
 	char		buf[550];
 	int			r;
 	tetrimino	*head;
-	int			fd;
 
-	fd = open("test", O_RDONLY);
 	r = (read(fd, buf, 550));
 	buf[r] = '\0';
 	s = ft_strdup(buf);

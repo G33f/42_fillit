@@ -17,7 +17,7 @@ SRC		= main.c\
 		  ft_starter.c\
 		  newtet.c\
 		  searchxy.c \
-		  valid.c \
+		  valid1.c \
 
 OBJ		= $(SRC:.c=.o)
 
@@ -25,14 +25,8 @@ CC		= clang
 
 CFLAGS	= -Wall -Wextra -Werror
 
-all: $(NAME)
-
-%.o:%.c
-	$(CC) $(CFLAGS) -I./$(INCLUDE) -o $@ -c $<
-
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(OBJ) -c $(SRC)
-	$(CC) -o $(NAME) $(OBJ) -I libft?includes -L libft/ -lft
+all:$(NAME)
+	gcc -o $(NAME) $(SRC) libft/fibft.a
 
 clean:
 	rm -rf $(OBJ)

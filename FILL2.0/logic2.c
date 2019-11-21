@@ -42,7 +42,7 @@ char		**ft_build(tetrimino *tes, char **cube, int leng)
 		return (cube);
 	if (!(step = ft_newmat(step, leng)))
 		return (NULL);
-	ft_matcp(step, cube, leng, leng + 1);
+	ft_matcp((void**)step, (const void**)cube, leng, leng + 1);
 	while (j < (leng - (int)tes->y))
 	{
 		i = 0;
@@ -53,14 +53,14 @@ char		**ft_build(tetrimino *tes, char **cube, int leng)
 				step = ft_put(tes, step, i, j);
 				if (!(cube = ft_build(tes->next, step, leng)))
 				{
-					ft_matdel(step, leng);
+					ft_matdel((void**)step, leng);
 					if (!(step = ft_newmat(step, leng)))
 						return (NULL);
 				}
 				else
 				{
-					ft_matcp(cube, step, leng, leng + 1);
-					ft_matdel(step, leng);
+					ft_matcp((void**)cube, (const void**)step, leng, leng + 1);
+					ft_matdel((void**)step, leng);
 					return (cube);
 				}
 			}

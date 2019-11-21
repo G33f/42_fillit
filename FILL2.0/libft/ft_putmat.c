@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void ft_putmat(char **mat)
+void	ft_putmat(const char **mat)
 {
 	if (!mat)
 		return ;
