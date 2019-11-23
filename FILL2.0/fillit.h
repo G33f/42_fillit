@@ -22,18 +22,17 @@ tetrimino				*ft_newtet(char **s, int x, int y, int numb);
 int						ft_search(char *s);
 int						ft_x(char *s);
 int						ft_y(char *s);
-int						lengt(tetrimino *tes);
 int						valid(char **s);
 int						vone(char *s, int *n, int *count);
 int						ft_one(char *s, int i, int *m, int *count);
 int						vtwo(char *s, char sim);
 void					ft_two(char *s, int *i, int *count, char *sim);
 int						ft_check(tetrimino *tes, char **cube, int i, int j);
-char					**ft_newmat(char **cube, int i);
+char					**ft_newmat(int i);
 int						ft_logic(tetrimino *tes);
 int						lengt(tetrimino *tes);
 int						ft_starter(int fd);
-char					put(tetrimino **tes, char **cube, int i,int j);
-char					**ft_build(tetrimino *tes, char **cube, int leng);
+int						put(tetrimino **tes, char **cube, int i,int j);
+int						ft_build(tetrimino *tes, char **cube, int leng);
 
 #endif

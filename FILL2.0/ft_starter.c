@@ -19,9 +19,9 @@ int		ft_check(tetrimino *tes, char **cube, int i, int j)
 
 	m = 0;
 	n = 0;
-	while (m < (int)tes->y)
+	while (m < (int)tes->x)
 	{
-		while (n < (int)tes->x)
+		while (n < (int)tes->y)
 		{
 			if ((cube[j + m][i + n] == '.') || (tes->content[m][n] == '.'))
 				n++;
@@ -34,12 +34,13 @@ int		ft_check(tetrimino *tes, char **cube, int i, int j)
 	return (1);
 }
 
-char	**ft_newmat(char **cube, int i)
+char	    **ft_newmat(int i)
 {
-	int 	r;
+	char    **cube;
+	int		r;
 
 	r = 0;
-	if (!(*cube = malloc(sizeof(i))))
+	if (!(cube = malloc(sizeof(char*) * (i + 1))))
 	{
 		return (NULL);
 	}
@@ -52,13 +53,16 @@ char	**ft_newmat(char **cube, int i)
 		}
 		r++;
 	}
+	cube[r] = malloc(sizeof(1));
+	cube[r][0] = '\0';
 	r = 0;
 	while(r < i)
 	{
-		*cube[r] = (char)ft_memset(cube[r], '.', i);
-		cube[r][i + 1] = '\n';
+		ft_memset(cube[r], '.', i);
+		ft_putmat((const char**)cube);
 		r++;
 	}
+	//ft_putmat((const char**)cube);
 	return (cube);
 }
 
@@ -69,21 +73,20 @@ int			ft_logic(tetrimino *tes)
 	int		i;
 
 	i = lengt(tes);
-	while(i < (lengt(tes) + 1))
+	while (i < (lengt(tes) + 1))
 	{
-		cube = ft_newmat(cube, i);
-		if (cube == NULL)
+		if (!(cube = ft_newmat(i)))
 			return (0);
-		cube = ft_build(tes, cube, i);
-		if (cube == NULL)
+		//ft_putmat((const char**)cube);
+		if (!(ft_build(tes, cube, i)))
 		{
-			ft_matdel((void**)cube, i);
+			//ft_matdel((void **) cube, i);
 			i++;
 		}
 		else
 		{
-			ft_putmat((const char**)cube);
-			ft_matdel((void**)cube, i);
+			//ft_putmat((const char **) cube);
+			//ft_matdel((void **) cube, i);
 			return (1);
 		}
 	}
@@ -93,12 +96,21 @@ int			ft_logic(tetrimino *tes)
 int		lengt(tetrimino *tes)
 {
 	int i;
+	//tetrimino *res;
 
-	i = tes->numb * 4;
+	//res = tes;
+	i = 0;
+	while (tes)
+	{
+		i++;
+		tes = tes->next;
+	}
+	i = i * 4;
 	if (((int)ft_sqrt(i) * (int)ft_sqrt(i)) < i)
 		i = ((int)ft_sqrt(i) + 1);
 	else
 		i = ((int)ft_sqrt(i));
+	//tes = res;
 	return (i);
 }
 
@@ -115,6 +127,11 @@ int		ft_starter(int fd)
 	if (valid(&s) < 0)
 		return (0);
 	head = maintet(s);
+	/*while (head != NULL)
+	{
+		ft_putmat((const char**)head->content);
+		head = head->next;
+	}*/
 	if (!(ft_logic(head)))
 		return (0);
 	return (1);

@@ -26,4 +26,3 @@ void	ft_matdel(void **as, int i)
 	ft_memdel(as);
 	as = NULL;
 }
-

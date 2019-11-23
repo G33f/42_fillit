@@ -22,7 +22,7 @@ int		main(int argc, char **argv)
 	if (!(ft_starter(open(argv[1], O_RDONLY))))
 	{
 		ft_putstr("error\n");
-		return (1);
+		return (0);
 	}
 	return (0);
 }

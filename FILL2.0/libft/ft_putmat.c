@@ -19,6 +19,7 @@ void	ft_putmat(const char **mat)
 	while(*mat)
 	{
 		ft_putstr(*mat);
+		ft_putchar('\n');
 		mat++;
 	}
 }
