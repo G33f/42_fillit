@@ -17,18 +17,14 @@ int			valid(char **s)
 {
 	char	sim;
 	int		i;
-	int		n;
 	int		count;
-	int		stop;
 
-	n = 0;
 	i = 0;
 	count = 0;
-	stop = ft_strlen(&s[0][0]);
-	if (vone(*s, &n, &count) < 0)
+	if (vone(*s, &count) < 0 || prover(*s) < 0)
 		return (-1);
 	sim = 'A';
-	while (s[0][i] && i < stop)
+	while (s[0][i] && i < (int)ft_strlen(&s[0][0]))
 	{
 		if (vtwo(&s[0][i], sim++) < 0)
 			return (-1);
@@ -37,7 +33,7 @@ int			valid(char **s)
 	return (0);
 }
 
-int			vone(char *s, int *n, int *count)
+int			vone(char *s, int *count)
 {
 	int		i;
 	int		m;
@@ -52,13 +48,6 @@ int			vone(char *s, int *n, int *count)
 				return (-1);
 			if (s[i++] == '#')
 				*count += 1;
-		}
-		*n += 1;
-		if (s[i] == '\n' && s[i - 1] == '\n')
-		{
-			if (*n > 5)
-				return (-1);
-			*n = 0;
 		}
 		if (ft_one(s, i, &m, count) < 0 || i++ > 545)
 			return (-1);
@@ -79,8 +68,6 @@ int			ft_one(char *s, int i, int *m, int *count)
 		*count = 0;
 		*m += 1;
 	}
-	if (s[i] == '\n' && s[i + 1] == '\n' && s[i + 2] == '\n')
-		return (-1);
 	return (0);
 }
 
@@ -93,7 +80,7 @@ int			vtwo(char *s, char sim)
 	count = 0;
 	i = 0;
 	e = 0;
-	while (s[i] != '#')
+	while (s[i] != '#' && s[i])
 		i++;
 	e = i;
 	while ((s[e + 1] == '#') || (s[e + 5] == '#' || s[e] == '#'))
@@ -111,7 +98,7 @@ void		ft_two(char *s, int *i, int *count, char *sim)
 {
 	int		j;
 
-	while (s[*i + 5] == '#' && *i + 5 < 21)
+	while (s[*i + 5] == '#' && *i + 5 < 20)
 	{
 		*i += 5;
 		j = *i;
@@ -119,16 +106,16 @@ void		ft_two(char *s, int *i, int *count, char *sim)
 		{
 			j++;
 			s[j] = *sim;
-			*count += (s[j + 5] == '#' && j + 5 < 21) ? 2 : 1;
-			s[j + 5] = (s[j + 5] == '#' && j + 5 < 21) ? *sim : s[j + 5];
+			*count += (s[j + 5] == '#' && j + 5 < 20) ? 2 : 1;
+			s[j + 5] = (s[j + 5] == '#' && j + 5 < 20) ? *sim : s[j + 5];
 		}
 		j = *i;
 		while (s[j - 1] == '#')
 		{
 			j -= 1;
 			s[j] = *sim;
-			*count += (s[j + 5] == '#' && j + 5 < 21) ? 2 : 1;
-			s[j + 5] = (s[j + 5] == '#' && j + 5 < 21) ? *sim : s[j + 5];
+			*count += (s[j + 5] == '#' && j + 5 < 20) ? 2 : 1;
+			s[j + 5] = (s[j + 5] == '#' && j + 5 < 20) ? *sim : s[j + 5];
 		}
 		s[*i] = *sim;
 		*count += 1;

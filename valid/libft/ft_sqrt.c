@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putsstr.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzenz <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/07 17:39:35 by tzenz             #+#    #+#             */
-/*   Updated: 2019/09/15 12:39:37 by tzenz            ###   ########.fr       */
+/*   Created: 2019/12/03 13:58:06 by tzenz             #+#    #+#             */
+/*   Updated: 2019/12/03 13:58:07 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/libft.h"
 
-void	ft_putsstr(char **s)
+double		ft_sqrt(double num)
 {
-    while (*s)
-    {
-        ft_putstr(*s);
-        s++;
-    }
+	double	r;
+	double	q;
+	int		i;
+
+	q = 0;
+	i = 0;
+	r = 1;
+	if (!num)
+		return (0);
+	while (i < 15)
+	{
+		q = 1 / ft_pow(10, i);
+		while (((r + q) * (r + q)) < num)
+			r += q;
+		i++;
+	}
+	return (r);
 }

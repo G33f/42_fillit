@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putsstr.c                                       :+:      :+:    :+:   */
+/*   ft_cpyptrn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzenz <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/07 17:39:35 by tzenz             #+#    #+#             */
-/*   Updated: 2019/09/15 12:39:37 by tzenz            ###   ########.fr       */
+/*   Created: 2019/12/04 15:44:03 by tzenz             #+#    #+#             */
+/*   Updated: 2019/12/04 15:44:05 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/libft.h"
+#include "../libft/include/libft.h"
 
-void	ft_putsstr(char **s)
+char		**ft_cpyptrn(char **field, char **before)
 {
-    while (*s)
-    {
-        ft_putstr(*s);
-        s++;
-    }
+	int		i;
+	int		j;
+	int		m;
+	int		n;
+
+	i = 0;
+	j = 0;
+	m = 0;
+	n = 0;
+	while (before[m])
+	{
+		while (before[m][n] != '\n')
+			field[i][j++] = before[m][n++];
+		i++;
+		m++;
+		j = 0;
+		n = 0;
+	}
+	return (field);
 }

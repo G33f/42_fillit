@@ -6,7 +6,7 @@
 #    By: tzenz <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/12 18:10:07 by tzenz             #+#    #+#              #
-#    Updated: 2019/10/10 18:53:15 by tzenz            ###   ########.fr        #
+#    Updated: 2019/12/05 13:53:39 by tzenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@ NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror -I include/
 
-SRC =   ft_strtrims.c\
+SRC =   ft_cpyptrn.c\
+        ft_pow.c\
+		ft_sqrt.c\
+		ft_countptr.c\
+		ft_strtrims.c\
         ft_putsstr.c\
         get_next_line.c\
         ft_memset.c\
@@ -60,6 +64,7 @@ SRC =   ft_strtrims.c\
 		ft_strjoin.c\
 		ft_strtrim.c\
 		ft_strsplit.c\
+		ft_strsplitc.c\
 		ft_itoa.c\
 		ft_putchar.c\
 		ft_putstr.c\

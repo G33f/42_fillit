@@ -29,6 +29,66 @@ int		ft_search(char *s)
 	return (sim);
 }
 
+int		ft_y(char *s) //x - для algm
+{
+	int	i;
+	int y;
+	int max;
+
+	max = 0;
+	i = 0;
+	y = 0;
+	while (i < 20)
+	{
+		if (ft_search(&s[i]))
+		{
+			while (i < 20 && s[i] != '\n' && s[i])
+			{
+				if (s[i] != '.' || (s[i + 5] != '.' && i + 5 < 20))
+					y++;
+				i++;
+			}
+			max = (max < y) ? y : max;
+			y = 0;
+		}
+		else
+			i += 4;
+		i++;
+	}
+	return (max);
+}
+
+int		ft_x(char *s) //x - для algm2
+{
+	int	i;
+	int x;
+	int max;
+
+	max = 0;
+	i = 0;
+	x = 0;
+	while (i < 20)
+	{
+		if (ft_search(&s[i]))
+		{
+			while (i < 20 && s[i] != '\n' && s[i])
+			{
+				if (s[i] != '.')
+					x++;
+				i++;
+			}
+			if (x)
+				return (x);
+			x = 0;
+		}
+		else
+			i += 4;
+		i++;
+	}
+	return (max);
+}
+
+/*
 int		ft_x(char *s)
 {
 	int flag;
@@ -40,7 +100,7 @@ int		ft_x(char *s)
 	flag = 0;
 	while (i < 20)
 	{
-		while (i < 20 && s[i] != '\n')
+		while (i < 20 && s[i] != '\n' && s[i])
 		{
 			if (s[i] != '.' && s[i] != '\0' && !flag)
 			{
@@ -68,7 +128,7 @@ int		ft_y(char *s)
 	{
 		if (ft_search(&s[i]))
 		{
-			while (i < 20 && s[i] != '\n')
+			while (i < 20 && s[i] != '\n' && s[i])
 			{
 				if (s[i] != '.' || (s[i + 5] != '.' && i + 5 < 20))
 					y++;
@@ -83,3 +143,4 @@ int		ft_y(char *s)
 	}
 	return (max);
 }
+ */

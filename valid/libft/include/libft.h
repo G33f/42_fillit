@@ -34,9 +34,10 @@ typedef struct			s_tetrimino
     size_t				numb;
     size_t				x;
     size_t				y;
+    size_t				count;
     char				**content;
     struct s_tetrimino	*next;
-}						tetrimino;
+}						t_tet;
 
 typedef struct				s_get_next_line
 {
@@ -45,22 +46,42 @@ typedef struct				s_get_next_line
 	struct s_get_next_line	*next;
 }							t_gnl;
 
+
+int					ft_s(int m, int n, int x, char **field);
+int					ft_countx(char **content, int m, int *n, char **field);
+int					ft_county(char **content, int m, int n, char **field);
+int					ft_fieldlong(t_tet *head, int i);
+void				ft_humhum(char **field, char **content, int m, int n);
+int					ft_write(char **field, int x, char **content);
+void				algm(t_tet *head);
+
+char				**ft_fieldcopy(char **field, char **before);
+char        		**addfield(char **before, int numb);
+
 int					ft_x(char *s);
 int					ft_y(char *s);
+int					prover(char *s);
 
-tetrimino			*maintet(char *s);
-tetrimino  			 *ft_newtet(char **s, int	x, int y, int	numb);
+t_tet				*maintet(char *s);
+t_tet  				*ft_newtet(char **s, int x, int y, int numb);
+int					ft_checklen(char *s);
 char   				**ft_add(char *s);
 char				*ft_add_2(char *s, char *buf, int sim);
 int					ft_search(char *s);
 
 int					valid(char **s);
-int					vone(char *s, int *n, int *count);
+int					vone(char *s, int *count);
 int					ft_one(char *s, int i, int *m, int *count);
 int					vtwo(char *s, char sim);
 void				ft_two(char *s, int *i, int *count, char *sim);
 
+
+double				ft_pow(double num, int pow);
+double				ft_sqrt(double num);
+char				**ft_cpyptrn(char **field, char **before);
+int					ft_countptr(char **s);
 char	            *ft_strtrims(char const *s);
+char				**ft_strsplitc(char const *s, char c);
 int					get_next_line(const int fd, char **line);
 void	            ft_putsstr(char **s);
 

@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putsstr.c                                       :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzenz <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/07 17:39:35 by tzenz             #+#    #+#             */
-/*   Updated: 2019/09/15 12:39:37 by tzenz            ###   ########.fr       */
+/*   Created: 2019/12/03 14:00:14 by tzenz             #+#    #+#             */
+/*   Updated: 2019/12/03 14:00:14 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/libft.h"
 
-void	ft_putsstr(char **s)
+double		ft_pow(double num, int pow)
 {
-    while (*s)
-    {
-        ft_putstr(*s);
-        s++;
-    }
+	double	res;
+	int		n;
+
+	res = 1;
+	if (!pow)
+		return (1);
+	if (pow < 0)
+	{
+		n = -1;
+		pow *= -1;
+	}
+	else
+		n = 1;
+	while (pow != 0)
+	{
+		res *= num;
+		pow--;
+	}
+	if (n < 0)
+		return (1 / res);
+	else
+		return (res);
 }
