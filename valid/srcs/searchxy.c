@@ -6,7 +6,7 @@
 /*   By: tzenz <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 17:35:47 by tzenz             #+#    #+#             */
-/*   Updated: 2019/11/15 17:35:48 by tzenz            ###   ########.fr       */
+/*   Updated: 2019/12/10 11:11:39 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,66 +29,6 @@ int		ft_search(char *s)
 	return (sim);
 }
 
-int		ft_y(char *s) //x - для algm
-{
-	int	i;
-	int y;
-	int max;
-
-	max = 0;
-	i = 0;
-	y = 0;
-	while (i < 20)
-	{
-		if (ft_search(&s[i]))
-		{
-			while (i < 20 && s[i] != '\n' && s[i])
-			{
-				if (s[i] != '.' || (s[i + 5] != '.' && i + 5 < 20))
-					y++;
-				i++;
-			}
-			max = (max < y) ? y : max;
-			y = 0;
-		}
-		else
-			i += 4;
-		i++;
-	}
-	return (max);
-}
-
-int		ft_x(char *s) //x - для algm2
-{
-	int	i;
-	int x;
-	int max;
-
-	max = 0;
-	i = 0;
-	x = 0;
-	while (i < 20)
-	{
-		if (ft_search(&s[i]))
-		{
-			while (i < 20 && s[i] != '\n' && s[i])
-			{
-				if (s[i] != '.')
-					x++;
-				i++;
-			}
-			if (x)
-				return (x);
-			x = 0;
-		}
-		else
-			i += 4;
-		i++;
-	}
-	return (max);
-}
-
-/*
 int		ft_x(char *s)
 {
 	int flag;
@@ -143,4 +83,3 @@ int		ft_y(char *s)
 	}
 	return (max);
 }
- */
