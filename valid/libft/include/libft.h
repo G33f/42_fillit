@@ -35,6 +35,7 @@ typedef struct			s_tetrimino
     size_t				x;
     size_t				y;
     size_t				count;
+    int					cnt;
     char				**content;
     struct s_tetrimino	*next;
 }						t_tet;
@@ -52,7 +53,8 @@ int					ft_countx(char **content, int m, int *n, char **field);
 int					ft_county(char **content, int m, int n, char **field);
 int					ft_fieldlong(t_tet *head, int i);
 void				ft_humhum(char **field, char **content, int m, int n);
-int					ft_write(char **field, int x, char **content);
+int					ft_write(char **field, t_tet *head);
+//int					ft_write(char **field, int x, char **content);
 void				algm(t_tet *head);
 
 char				**ft_fieldcopy(char **field, char **before);

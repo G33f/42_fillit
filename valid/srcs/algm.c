@@ -6,14 +6,14 @@
 /*   By: tzenz <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 14:58:29 by tzenz             #+#    #+#             */
-/*   Updated: 2019/12/10 10:35:36 by tzenz            ###   ########.fr       */
+/*   Updated: 2019/11/22 14:58:30 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/include/libft.h"
 #include <stdio.h>
 
-int				ft_write(char **field, int x, char **content)
+int				ft_write(char **field, t_tet *tmp)
 {
 	int			m;
 	int			n;
@@ -22,11 +22,14 @@ int				ft_write(char **field, int x, char **content)
 	n = 0;
 	while (field[m] && field[m][n])
 	{
-		if (x == ft_countx(content, m, &n, field))
+		if (tmp->x == ft_countx(tmp->content, m, &n, field))
 		{
-			ft_humhum(field, content, m, n);
-			return (ft_s(m, n, x, field));
+			ft_humhum(field, tmp->content, m, n);
+			tmp->count++;
+			return (ft_s(m, n, tmp->x, field));
 		}
+//		else if (ft_countx(tmp->content, m, &n, field) == -1)
+//			return (-1);
 		if (field[m][n] == '\n')
 		{
 			m++;
@@ -35,11 +38,12 @@ int				ft_write(char **field, int x, char **content)
 		else
 			n++;
 	}
-	return (0);
+	return (-1);
 }
 
 int				ft_countx(char **content, int m, int *n, char **field)
 {
+	int 		count;
 	int			j;
 
 	j = 0;
@@ -51,10 +55,10 @@ int				ft_countx(char **content, int m, int *n, char **field)
 		{
 			if (j + 1 == (int)(ft_strlen(content[0])) && field[m][*n] != '\n')
 			{
-				if (ft_county(content, m, *n - j, field))
+				if ((count = ft_county(content, m, *n - j, field)))
 				{
 					*n = *n - j;
-					return (j + 1);
+					return ((count < 0) ? count : j + 1);
 				}
 			}
 			j++;
@@ -145,6 +149,32 @@ int				ft_s(int m, int n, int x, char **field)
 }
 
 /*
+ * int				ft_write(char **field, int x, char **content)
+{
+	int			m;
+	int			n;
+
+	m = 0;
+	n = 0;
+	while (field[m] && field[m][n])
+	{
+		if (x == ft_countx(content, m, &n, field))
+		{
+			ft_humhum(field, content, m, n);
+			return (ft_s(m, n, x, field));
+		}
+		if (field[m][n] == '\n')
+		{
+			m++;
+			n = 0;
+		}
+		else
+			n++;
+	}
+	return (-1);
+}
+ *
+ *
  * int				maxnumb(t_tet *head)
 {
 	int 		count;

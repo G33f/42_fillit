@@ -91,6 +91,7 @@ t_tet			*ft_newtet(char **s, int x, int y, int numb)
 	tmp->x = x;
 	tmp->y = y;
 	tmp->count = 0;
+	tmp->cnt = 0;
 	tmp->content = s;
 	tmp->next = NULL;
 	return (tmp);
