@@ -81,6 +81,7 @@ void				ft_matdel(void **as, int i);
 void				**ft_matcp(void **dest, const void **source, size_t n1, size_t n2);
 void				ft_putmat(const char **mat);
 int					get_next_line(const int fd, char **line);
+void				ft_strdel(char **as);
 
 typedef struct		s_list
 {
@@ -96,7 +97,7 @@ typedef struct			s_tetrimino
 	size_t				y;
 	char				**content;
 	struct s_tetrimino	*next;
-}						tetrimino;
+}						t_tet;
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));

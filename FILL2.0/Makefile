@@ -3,37 +3,29 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wpoudre <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: tzenz <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/09/08 17:17:22 by wpoudre           #+#    #+#              #
-#    Updated: 2019/09/08 17:17:24 by wpoudre          ###   ########.fr        #
+#    Created: 2019/08/12 18:25:28 by tzenz             #+#    #+#              #
+#    Updated: 2019/12/05 14:19:23 by tzenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= fillit
+NAME = fillit
 
-SRC		= main.c\
-		  logic2.c\
-		  ft_starter.c\
-		  newtet.c\
-		  searchxy.c \
-		  valid1.c \
+SRC = srcs/*.c\
+      libft/libft.a\
 
-OBJ		= $(SRC:.c=.o)
+FLAGS = -Wall -Wextra -Werror
 
-CC		= clang
+all: $(NAME)
 
-CFLAGS	= -Wall -Wextra -Werror
-
-all:$(NAME)
-	gcc -o $(NAME) $(SRC) libft/fibft.a
+$(NAME):
+	gcc $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+	libft/bin/rm -f *.o
 
 fclean: clean
-	rm -rf $(NAME)
+	libft/bin/rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re
