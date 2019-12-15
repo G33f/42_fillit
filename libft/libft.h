@@ -6,7 +6,7 @@
 /*   By: wpoudre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 18:07:15 by wpoudre           #+#    #+#             */
-/*   Updated: 2019/09/08 18:07:24 by wpoudre          ###   ########.fr       */
+/*   Updated: 2019/12/15 12:42:31 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int					ft_tolower(int ch);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
-void				ft_strdel(char **as);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -78,9 +77,11 @@ char				*ft_alpup(char *str);
 double				ft_sqrt(double num);
 double				ft_pow(double num, int pow);
 char				*ft_strndup(const char *s1, size_t n);
-void				ft_matdel(char ***as, int i);
-void				ft_matcp(char ***mat1, char ***mat2, int mt1_l, int mt2_l);
+void				ft_matdel(void **as, int i);
+void				**ft_matcp(void **d, const void **s, size_t n1, size_t n2);
+void				ft_putmat(const char **mat);
 int					get_next_line(const int fd, char **line);
+void				ft_strdel(char **as);
 
 typedef struct		s_list
 {
@@ -88,6 +89,15 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_tet
+{
+	size_t			numb;
+	size_t			x;
+	size_t			y;
+	char			**content;
+	struct s_tet	*next;
+}					t_tet;
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_matdel.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wpoudre <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tzenz <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/12 20:46:06 by wpoudre           #+#    #+#             */
-/*   Updated: 2019/12/15 12:38:53 by tzenz            ###   ########.fr       */
+/*   Created: 2019/10/30 14:37:14 by tzenz             #+#    #+#             */
+/*   Updated: 2019/11/19 14:03:51 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fillit.h"
 
-void	ft_matdel(void **as, int i)
+int	main(int argc, char **argv)
 {
-	if (!as || !*as)
-		return ;
-	while (i)
+	if (argc != 2)
 	{
-		ft_memdel(&as[i]);
-		as[i] = NULL;
-		i--;
+		ft_putstr("usage: fillit input_file\n");
+		return (1);
 	}
-	ft_memdel(as);
-	as = NULL;
+	if (!(ft_starter(open(argv[1], O_RDONLY))))
+	{
+		ft_putstr("error\n");
+		return (0);
+	}
+	return (0);
 }

@@ -3,29 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wpoudre <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tzenz <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/15 16:20:24 by wpoudre           #+#    #+#             */
-/*   Updated: 2019/09/15 16:20:27 by wpoudre          ###   ########.fr       */
+/*   Created: 2019/09/09 11:19:12 by tzenz             #+#    #+#             */
+/*   Updated: 2019/09/18 18:14:22 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	void	ft_clean(char **str, int i)
+static	int	ft_words(char const *s, char c)
 {
-	while (i >= 0)
+	int		cu;
+	int		i;
+
+	i = 0;
+	cu = 0;
+	while (s[i])
 	{
-		free((*str + i));
-		i--;
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+			cu++;
+		while (s[i] != c && s[i] != '\0')
+			i++;
 	}
-	free(str);
+	return (cu);
 }
 
-static	int		ft_len(char const *s, char c)
+static	int	ft_len(char const *s, char c)
 {
-	int			i;
-	int			len;
+	int		i;
+	int		len;
 
 	i = 0;
 	len = 0;
@@ -39,25 +48,24 @@ static	int		ft_len(char const *s, char c)
 	return (len);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	int			i;
-	int			j;
-	int			l;
-	char		**str;
+	char	**str;
+	int		i;
+	int		j;
+	int		l;
 
-	if (!s || !(str = (char **)malloc(sizeof(str) * (ft_cu_wards(s, c) + 1))))
+	if (!s)
+		return (NULL);
+	if (!(str = (char **)ft_memalloc(sizeof(char **) * (ft_words(s, c) + 1))))
 		return (NULL);
 	i = -1;
 	j = 0;
-	while (++i < ft_cu_wards(s, c))
+	while (++i < ft_words(s, c))
 	{
 		l = 0;
 		if (!(str[i] = ft_strnew(ft_len(&s[j], c) + 1)))
-		{
-			ft_clean(str, i);
 			return (NULL);
-		}
 		while (s[j] == c)
 			j++;
 		while (s[j] != c && s[j])

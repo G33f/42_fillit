@@ -6,29 +6,36 @@
 /*   By: wpoudre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 20:56:52 by wpoudre           #+#    #+#             */
-/*   Updated: 2019/11/14 20:56:54 by wpoudre          ###   ########.fr       */
+/*   Updated: 2019/12/15 12:39:37 by tzenz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_matcp(char ***mat1, char ***mat2, int mt1_l, int mt2_l)
+void	**ft_matcp(void **d, const void **s, size_t n1, size_t n2)
 {
-	int i;
-	int j;
+	unsigned char	**str1;
+	unsigned char	**str2;
+	size_t			i;
+	size_t			j;
 
-	if (!mat1 || !mat2 || (mt1_l != mt2_l) || (!mt1_l))
-		return ;
+	str1 = (unsigned char **)d;
+	str2 = (unsigned char **)s;
+	if (!s && !d)
+		return (NULL);
 	i = 0;
 	j = 0;
-	while (j < mt1_l)
+	if (n1 <= 0 || n2 <= 0)
+		return (d);
+	while (i < n1)
 	{
-		while(i < mt1_l)
+		while (j < n2)
 		{
-			mat1[j][i] = mat2[j][i];
-			i++;
+			str1[i][j] = str2[i][j];
+			j++;
 		}
-		i = 0;
-		j++;
+		j = 0;
+		i++;
 	}
+	return (d);
 }
