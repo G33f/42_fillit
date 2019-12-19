@@ -12,7 +12,7 @@
 
 #ifndef FILLIT_H
 # define FILLIT_H
-# include "../libft/libft.h"
+# include "libft/libft.h"
 # include <fcntl.h>
 
 t_tet					*ft_maintet(char *s);

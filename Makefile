@@ -12,11 +12,11 @@
 
 NAME = fillit
 
-SRC =	srcs/starter.c\
-		srcs/logic.c\
-		srcs/newtet.c\
-		srcs/searchxy.c\
-		srcs/valid.c\
+SRC =	starter.c\
+		logic.c\
+		newtet.c\
+		searchxy.c\
+		valid.c\
 
 OBJ = $(SRC:.c = .o)
 
