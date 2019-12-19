@@ -28,12 +28,14 @@ int						ft_one(char *s, int i, int *m, int *count);
 int						ft_vtwo(char *s, char sim);
 void					ft_two(char *s, int *i, int *count, char *sim);
 int						ft_check(t_tet *tes, char **cube, int i, int j);
-char					**ft_newmat(int i, int r);
+char					**ft_newmat(int numb);
 int						ft_logic(t_tet *tes);
 int						ft_lengt(t_tet *tes);
 int						ft_starter(int fd);
 int						ft_put(t_tet *tes, char **cube, int i, int j);
 int						ft_build(t_tet *tes, char **cube, int leng);
 int						ft_prover(char *s);
+void					ft_fielddel(char **field, int i);
+t_tet					*ft_freetet(t_tet *head);
 
 #endif

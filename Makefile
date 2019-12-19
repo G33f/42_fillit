@@ -6,41 +6,40 @@
 #    By: tzenz <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/12 18:25:28 by tzenz             #+#    #+#              #
-#    Updated: 2019/12/15 12:35:39 by tzenz            ###   ########.fr        #
+#    Updated: 2019/12/19 12:39:58 by tzenz            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fillit
 
-SRC = srcs/*.c\
+SRC =	srcs/starter.c\
+		srcs/logic.c\
+		srcs/newtet.c\
+		srcs/searchxy.c\
+		srcs/valid.c\
 
-OBJ =   ft_starter.o\
-        logic2.o\
-        main.o\
-        newtet.o\
-        searchxy.o\
-        valid1.o\
+OBJ = $(SRC:.c = .o)
 
-INCLUDE = libft.a\
+INCLUDE = libft/libft.a\
 
 FLAGS = -Wall -Wextra -Werror
 
 SRC_LIBFT = libft/*.c\
 
-OBJ_LIBFT = *.o\
+OBJ_LIBFT = libft/*.o\
 
 all: $(NAME)
 
 $(NAME):
-		gcc -c  $(FLAGS) $(SRC_LIBFT)
-		ar rc libft.a $(OBJ_LIBFT)
-		ranlib libft.a
+		make -C ./libft
 		gcc $(FLAGS) -c $(SRC)
-		gcc $(OBJ) $(INCLUDE) -o $(NAME)
+		gcc $(OBJ) $(OBJ_LIBFT) $(INCLUDE) -o $(NAME)
 clean:
-	/bin/rm -f *.o libft/*.o
+	make clean -C ./libft
+	rm -f *.o
 
 fclean: clean
-	/bin/rm -f $(NAME) libft.a
+	make fclean -C ./libft
+	rm -f $(NAME)
 
-re: fclean all
+re: fclean clean all

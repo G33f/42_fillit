@@ -66,7 +66,8 @@ char			*ft_add_2(char *s, char *buf, int sim)
 		{
 			while (s[i] && s[i] != '\n')
 			{
-				if (s[i + 5] == sim || ((s[i + 10] == sim) && i + 10 < 20))
+				if ((s[i + 5] == sim && i + 5 < 20)
+				|| (s[i + 10] == sim && i + 10 < 20))
 					buf[j++] = s[i];
 				else if (s[i] == sim || s[i - 5] == sim || s[i - 10] == sim)
 					buf[j++] = s[i];
@@ -85,7 +86,7 @@ t_tet			*ft_newtet(char **s, int x, int y, int numb)
 {
 	t_tet		*tmp;
 
-	tmp = (t_tet*)ft_memalloc(sizeof(t_tet));
+	tmp = (t_tet *)ft_memalloc(sizeof(t_tet));
 	tmp->numb = numb;
 	tmp->x = x;
 	tmp->y = y;

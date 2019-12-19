@@ -34,31 +34,29 @@ int			ft_check(t_tet *tes, char **cube, int i, int j)
 	return (1);
 }
 
-char		**ft_newmat(int i, int r)
+char		**ft_newmat(int numb)
 {
-	char	*str;
-	char	*buf;
-	char	*tmp;
-	char	**cube;
+	char	**field;
+	char	buf[numb * (numb + 1)];
+	int		ins;
+	int		i;
 
-	if (!(str = ft_memalloc(sizeof(char) * (i + 2))))
-		return (NULL);
-	ft_memset(str, '.', i);
-	str[i] = '\n';
-	buf = str;
-	while (r < i)
+	i = 0;
+	ins = numb;
+	while (i < numb * (numb + 1))
 	{
-		tmp = buf;
-		if (!(buf = ft_strjoin(buf, str)))
-			return (NULL);
-		if (r > 1)
-			free(tmp);
-		r++;
+		if (i == ins)
+		{
+			buf[i] = '\n';
+			ins += numb + 1;
+		}
+		else
+			buf[i] = '.';
+		i++;
 	}
-	cube = ft_strsplit(buf, '\n');
-	free(str);
-	free(buf);
-	return (cube);
+	buf[i] = '\0';
+	field = ft_strsplit(buf, '\n');
+	return (field);
 }
 
 int			ft_logic(t_tet *tes)
@@ -69,17 +67,14 @@ int			ft_logic(t_tet *tes)
 	i = ft_lengt(tes);
 	while (i <= (ft_lengt(tes) + 1))
 	{
-		if (!(cube = ft_newmat(i, 1)))
+		if (!(cube = ft_newmat(i)))
 			return (0);
 		if (!(ft_build(tes, cube, i)))
-		{
-			ft_matdel((void **)cube, i);
-			i++;
-		}
+			ft_fielddel(cube, i++);
 		else
 		{
 			ft_putmat((const char **)cube);
-			ft_matdel((void **)cube, i);
+			ft_fielddel(cube, i);
 			return (1);
 		}
 	}
@@ -115,10 +110,17 @@ int			ft_starter(int fd)
 	buf[r] = '\0';
 	s = ft_strdup(buf);
 	if (ft_valid(&s) < 0)
+	{
+		free(s);
 		return (0);
+	}
 	head = ft_maintet(s);
 	free(s);
 	if (!(ft_logic(head)))
+	{
+		ft_freetet(head);
 		return (0);
+	}
+	ft_freetet(head);
 	return (1);
 }

@@ -80,3 +80,25 @@ int		ft_build(t_tet *tes, char **cube, int leng)
 	}
 	return (0);
 }
+
+int		main(int argc, char **argv)
+{
+	int fd;
+
+	if (argc != 2)
+	{
+		ft_putstr("usage: fillit input_file\n");
+		exit(-1);
+		return (1);
+	}
+	if (!(ft_starter((fd = open(argv[1], O_RDONLY)))))
+	{
+		ft_putstr("error\n");
+		close(fd);
+		exit(-1);
+		return (0);
+	}
+	close(fd);
+	exit(0);
+	return (0);
+}

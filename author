@@ -1,0 +1,36 @@
+wpoudre
+tzenz
+
+NAME = fillit
+
+SRC = srcs/*.c\
+
+OBJ =   starter.o\
+        logic.o\
+        newtet.o\
+        searchxy.o\
+        valid.o\
+
+INCLUDE = libft.a\
+
+FLAGS = -Wall -Wextra -Werror
+
+SRC_LIBFT = libft/*.c\
+
+OBJ_LIBFT = *.o\
+
+all: $(NAME)
+
+$(NAME):
+		gcc -c  $(FLAGS) $(SRC_LIBFT)
+		ar rc libft.a $(OBJ_LIBFT)
+		ranlib libft.a
+		gcc $(FLAGS) -c $(SRC)
+		gcc $(OBJ) $(INCLUDE) -o $(NAME)
+clean:
+	/bin/rm -f *.o
+
+fclean: clean
+	/bin/rm -f $(NAME) libft.a
+
+re: fclean clean all

@@ -93,9 +93,9 @@ $(NAME):
 	ranlib $(NAME)
 
 clean:
-	/bin/rm -f *.o
+	rm -f *.o
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all

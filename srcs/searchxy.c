@@ -82,3 +82,35 @@ int		ft_y(char *s)
 	}
 	return (max);
 }
+
+t_tet	*ft_freetet(t_tet *head)
+{
+	int i;
+
+	i = 0;
+	if (head)
+		while (head->content[i])
+		{
+			free(head->content[i]);
+			head->content[i] = NULL;
+			i++;
+		}
+	else
+		return (NULL);
+	ft_freetet(head->next);
+	free(head->content);
+	free(head);
+	head = NULL;
+	return (NULL);
+}
+
+void	ft_fielddel(char **field, int i)
+{
+	while (i > -1)
+	{
+		free(field[i]);
+		field[i--] = NULL;
+	}
+	free(field);
+	field = NULL;
+}

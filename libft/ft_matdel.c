@@ -16,12 +16,11 @@ void	ft_matdel(void **as, int i)
 {
 	if (!as || !*as)
 		return ;
-	while (i)
+	while (as[i])
 	{
-		ft_memdel(&as[i]);
-		as[i] = NULL;
-		i--;
+		free(as[i]);
+		as[i--] = NULL;
 	}
-	ft_memdel(as);
+	free(as);
 	as = NULL;
 }
